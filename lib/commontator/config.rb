@@ -4,7 +4,8 @@ module Commontator::Config
   # Can be set in initializer only
   ENGINE_ATTRIBUTES = [
     :current_user_proc,
-    :javascript_proc
+    :javascript_proc,
+    :parent_mailer
   ]
 
   # Can be set in initializer or passed as an option to acts_as_commontator

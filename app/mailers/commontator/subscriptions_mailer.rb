@@ -1,4 +1,4 @@
-class Commontator::SubscriptionsMailer < ActionMailer::Base
+class Commontator::SubscriptionsMailer < Commontator.parent_mailer.constantize
   helper Commontator::SharedHelper
 
   def comment_created(comment, recipients)
