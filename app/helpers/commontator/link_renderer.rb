@@ -1,3 +1,5 @@
+require 'will_paginate/view_helpers/action_view'
+
 class Commontator::LinkRenderer < WillPaginate::ActionView::LinkRenderer
   protected
 
