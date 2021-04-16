@@ -4,9 +4,9 @@ class Commontator::SubscriptionsMailer < Commontator.parent_mailer.constantize
   def comment_created(comment, recipients)
     setup_variables(comment, recipients)
 
-    mail(@mail_params).tap do |message|
-      message.mailgun_recipient_variables = @mailgun_recipient_variables if @using_mailgun
-    end
+    @mail_params[:account_id] = @thread.commontable.account_id
+    puts "comment created for account #{@mail_params[:account_id]}"
+    mail_from_tenant(@mail_params)
   end
 
   protected
